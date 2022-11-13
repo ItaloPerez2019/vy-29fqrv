@@ -38,13 +38,10 @@ export class AppComponent {
 
     criteria.name = teamName === '' ? null : teamName;
 
-
-    this.teamService.searchTeams(criteria).subscribe(
-      ( teams => {
-        this.results = teams;
-      })
-    },
-  
+    this.teamService.searchTeams(criteria).subscribe((teams) => {
+      this.results = teams;
+    });
+  }
 
   toggleSearchCriteria() {
     this.showCriteria = !this.showCriteria;
